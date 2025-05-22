@@ -26,6 +26,7 @@ body{
     flex-direction: column;
     gap: 10px;
     border-radius: 20px;
+    z-index: 10;
 }
 .header {
     font-size: 25px;
@@ -54,6 +55,8 @@ body{
 .account-details .name input {
     height: 30px;
     width: 70%;
+    padding: 10px;
+    color: black;
 }
 .account-details .deposit-input label {
     font-weight: bold;
@@ -88,6 +91,7 @@ body{
     height: 100%;
     top: 0;
     border: 1px solid #fff;
+    /* display: none; */
 }
 
 
