@@ -12,13 +12,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .create-account-container{
-    width: max-content;
+    width: auto;
+    max-width: 90%; 
     height: fit-content;
     background-color: aliceblue;
     color: #222;
     margin: 0 auto;
     position: relative;
-    top: 40%;
+    top: 10%;
     /* left: 20%; */
     padding: 20px;
     border: 1px solid #fff;
@@ -27,6 +28,7 @@ body{
     gap: 10px;
     border-radius: 20px;
     z-index: 10;
+    /* display: none; */
 }
 .header {
     font-size: 25px;
@@ -90,17 +92,215 @@ body{
     width: 100%;
     height: 100%;
     top: 0;
-    border: 1px solid #fff;
-    /* display: none; */
+    display: none; 
+}
+.container header {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.container main {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+.container main .balance-container{
+    background-color: aliceblue;
+    height: 50%;
+    color: #222;
+    padding: 50px;
+    width: 60%;
+    /* text-align: center; */
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.container main .balance-container .your-balance {
+    font-size: 30px;
+    font-weight: bold;
+}
+.container main .balance-container .balance {
+    margin-top:  50px;
+}
+.container main .balance-container #balance {
+    font-size: 50px;
+    font-weight: bold;
+    color: green;
 }
 
+.container main .bank-tools{
+    /* width: 50%; */
+    margin: 0 auto;
+    display: flex;
+    /* gap: 50px; */
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.container main .bank-tools .withdraw-container {
+    background-color: rebeccapurple;
+    padding: 20px 30px 10px 30px;
+    height: max-content;
+    height: 200px;
+    border-radius: 20px;
+    text-align: center;
+}
+.container main .bank-tools .withdraw-container .withdraw-header{
+    font-size: larger;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container main .bank-tools .withdraw-container .withdraw-input #withdraw-amount{
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 5px;
+}
+.container main .bank-tools .withdraw-container .withdraw-btn{
+    text-align: center;
+}
+.container main .bank-tools .withdraw-container .withdraw-btn #withdraw-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(207, 13, 13);
+    background: rgb(207, 13, 13);
+    color: #fff;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.container main .bank-tools .deposit-container {
+    background-color: rebeccapurple;
+    padding: 20px 30px 10px 30px;
+    height: max-content;
+    height: 200px;
+    border-radius: 20px;
+    text-align: center;
+}
+.container main .bank-tools .deposit-container .deposit-header{
+    font-size: larger;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container main .bank-tools .deposit-container .deposit-input #deposit-amount{
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 5px;
+}
+.container main .bank-tools .deposit-container .deposit-btn{
+    text-align: center;
+}
+.container main .bank-tools .deposit-container .deposit-btn #deposit-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(207, 13, 13);
+    background: rgb(207, 13, 13);
+    color: #fff;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
 
+/* --- Mobile phones (max-width: 600px) --- */
+@media (max-width: 600px) {
+  .create-account-container {
+    padding: 15px;
+    max-width: 90%;
+    margin-top: 5vh;
+  }
 
+  .account-details .name,
+  .account-details .deposit-input {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
 
+  .account-details .name input,
+  .account-details .deposit-input input {
+    width: 100%;
+  }
 
+  .account-details #create-btn {
+    width: 100%;
+  }
+}
 
+/* --- Tablets (600px - 900px) --- */
+@media (max-width: 900px) {
+  .create-account-container {
+    top: 30%;
+    width: 70%;
+  }
 
+  .container main .balance-container {
+    width: 80%;
+  }
 
+  .container main .bank-tools {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .withdraw-container,
+  .deposit-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-account-container {
+    width: 90%;
+    top: 20%;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .account-details {
+    gap: 25px;
+  }
+
+  .account-details .name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .account-details .name input,
+  .account-details .deposit-input input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .account-details #create-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-account-container {
+    padding: 10px;
+    top: 15%;
+  }
+
+  .header {
+    font-size: 20px;
+  }
+
+  .account-details .name label,
+  .account-details .deposit-input label {
+    font-size: 16px;
+  }
+
+  .create-account-container #remark {
+    font-size: xx-small;
+  }
+} 
 
 
 
