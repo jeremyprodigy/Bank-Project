@@ -12,7 +12,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .create-account-container{
-    width: auto;
+    width: 400px;
     max-width: 90%; 
     height: fit-content;
     background-color: aliceblue;
@@ -28,7 +28,7 @@ body{
     gap: 10px;
     border-radius: 20px;
     z-index: 10;
-    /* display: none; */
+    display: none;
 }
 .header {
     font-size: 25px;
@@ -203,7 +203,7 @@ body{
 }
 
 /* --- Mobile phones (max-width: 600px) --- */
-@media (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .create-account-container {
     padding: 15px;
     max-width: 90%;
@@ -225,10 +225,10 @@ body{
   .account-details #create-btn {
     width: 100%;
   }
-}
+} */
 
 /* --- Tablets (600px - 900px) --- */
-@media (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .create-account-container {
     top: 30%;
     width: 70%;
@@ -280,9 +280,9 @@ body{
     font-size: 16px;
     padding: 12px;
   }
-}
+} */
 
-@media (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .create-account-container {
     padding: 10px;
     top: 15%;
@@ -300,7 +300,7 @@ body{
   .create-account-container #remark {
     font-size: xx-small;
   }
-} 
+}  */
 
 
 

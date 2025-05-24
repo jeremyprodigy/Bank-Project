@@ -14,12 +14,16 @@ let obj = JSON.parse(localStorage.getItem('account-details')) || {};
 if (JSON.parse(localStorage.getItem('account-details'))) {
     // console.log('worked');
     balance.textContent = obj.balance;
-    greeting.textContent = `Hi, ${obj.name}`
+    greeting.textContent = `Hi, ${obj.name}`;
+    mainContainer.style.display = 'block';
 }
 if (localStorage.getItem('loginHidden') === "true") {
     createAccContainer.style.display = 'none';
+}else {
+    createAccContainer.style.display = 'block'
 }
 console.log(createAccContainer);
+console.log(window.innerWidth);
 
 
 function save() {
@@ -36,7 +40,7 @@ createAccBtn.addEventListener('click', () => {
     createAccContainer.style.display = 'none';
     localStorage.setItem('loginHidden', 'true')
     save();
-    mainContainer.style.display = 'block'
+    mainContainer.style.display = 'block';
 });
 
 withdrawBtn.addEventListener('click', () => {
